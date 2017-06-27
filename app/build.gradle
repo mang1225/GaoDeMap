@@ -1,0 +1,57 @@
+apply plugin: 'com.android.application'
+
+android {
+  sourceSets {
+    main {
+      jniLibs.srcDirs = ['libs']
+    }
+  }
+  compileSdkVersion 25
+  buildToolsVersion '26.0.0'
+
+  defaultConfig {
+    //    applicationId "com.okman.location.demo"
+    applicationId "com.fingerchat.hulian"
+    minSdkVersion 14
+    targetSdkVersion 25
+    versionCode 2
+    versionName "2.0"
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+  signingConfigs {
+    /**
+     * 设置你的keystore相关
+     * demo中只是一个示例，使用时请根据实际情况进行配置*/
+    debug {
+      //keystore中key的别名
+      keyAlias 'androiddebugkey'
+      //keystore中key的密码
+      keyPassword 'android'
+      //keystore的文件路径，可以是绝对路径也可以是相对路径
+      storeFile file('C:\\Users\\ll117394\\.android\\debug.keystore')
+      //keystore的密码
+      storePassword 'android'
+    }
+    release {
+      //keystore中key的别名
+      keyAlias 'Test'
+      //keystore中key的密码
+      keyPassword '123456'
+      //keystore的文件路径，可以是绝对路径也可以是相对路径
+      storeFile file('D:\\Android\\Keystore\\Test.jks')
+      //keystore的密码
+      storePassword '123456'
+    }
+  }
+}
+
+dependencies {
+  compile fileTree(include: ['*.jar'], dir: 'libs')
+  compile 'com.android.support:appcompat-v7:25.3.1'
+  compile 'com.github.bumptech.glide:glide:3.7.0'
+}
