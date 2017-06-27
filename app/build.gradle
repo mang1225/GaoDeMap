@@ -10,8 +10,7 @@ android {
   buildToolsVersion '26.0.0'
 
   defaultConfig {
-    //    applicationId "com.okman.location.demo"
-    applicationId "com.fingerchat.hulian"
+    applicationId "com.okman.location.demo"
     minSdkVersion 14
     targetSdkVersion 25
     versionCode 2
@@ -27,7 +26,6 @@ android {
     /**
      * 设置你的keystore相关
      * demo中只是一个示例，使用时请根据实际情况进行配置*/
-
   }
 }
 
