@@ -455,7 +455,7 @@ public class ShareLocationActivity extends CheckPermissionsActivity
     }
     if (addressInfo != null) {
       ToastUtil.show(this, "要发送的数据：" + "\n 经度：" + addressInfo.latLonPoint.getLongitude() + "\n 纬度：" + addressInfo.latLonPoint.getLatitude() + "\n 地址：" + addressInfo.addressName);
-      takeShot();
+      //takeShot();
     } else {
       ToastUtil.show(this, "请选择地址");
     }
@@ -508,7 +508,5 @@ public class ShareLocationActivity extends CheckPermissionsActivity
     int[] location = new int[2];
     view.getLocationOnScreen(location);
     popupWindow.showAtLocation(view, Gravity.NO_GRAVITY, (location[0] + view.getWidth() / 2) - popupWidth / 2, location[1] - popupHeight);
-
-    takeShot();
   }
 }
